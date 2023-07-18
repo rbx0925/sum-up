@@ -1,0 +1,31 @@
+server:
+  port: 18081
+
+spring:
+  application:
+    name: business
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/fescar-business?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 12345678
+
+feign:
+  hystrix:
+    enabled: true
+
+ribbon:
+  ConnectTimeout: 3000
+  ReadTimeout: 3000
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 0
+  OkToRetryOnAllOperations: false
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 9000
+          strategy: SEMAPHORE

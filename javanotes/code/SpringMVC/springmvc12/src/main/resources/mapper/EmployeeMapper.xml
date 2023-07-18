@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--这里的命名空间需要指定该文件实现的哪个接口-->
+<mapper namespace="com.atguigu.mapper.EmployeeMapper">
+    <!--核心配置文件中起过别名了，直接使用employee即可-->
+    <select id="getAllEmployee" resultType="employee">
+        select * from  employees
+    </select>
+</mapper>

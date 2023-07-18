@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <!--配置自动扫描的包-->
+    <context:component-scan base-package="com.atguigu">
+        <!--只扫描@Controller注解，防止与spring冲突-->
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+
+    <!--配置视图解析器-->
+    <bean class="org.thymeleaf.spring5.view.ThymeleafViewResolver" id="viewResolver">
+        <!--配置字符集-->
+        <property name="characterEncoding" value="UTF-8"></property>
+        <!--配置模板引擎-->
+        <property name="templateEngine">
+            <bean class="org.thymeleaf.spring5.SpringTemplateEngine">
+                <!--配置模板解析器-->
+                <property name="templateResolver">
+                    <bean class="org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver">
+                        <!--配置前缀-->
+                        <property name="prefix" value="/WEB-INF/pages/"></property>
+                        <!--配置后缀-->
+                        <property name="suffix" value=".html"></property>
+                        <!--配置字符集-->
+                        <property name="characterEncoding" value="UTF-8"></property>
+                    </bean>
+                </property>
+            </bean>
+        </property>
+    </bean>
+    <!--去首页-->
+    <mvc:view-controller path="/" view-name="index"></mvc:view-controller>
+
+    <!--防止controller失效，必须配置-->
+    <mvc:annotation-driven/>
+
+    <!--加载网页的静态资源，必须配置-->
+    <mvc:default-servlet-handler/>
+</beans>

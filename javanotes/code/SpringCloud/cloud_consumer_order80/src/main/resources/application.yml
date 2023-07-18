@@ -1,0 +1,20 @@
+server:
+  port: 90
+spring:
+  application:
+    name: cloud-consumer-order80
+
+    zipkin:
+      base-url: http://localhost:9411
+    sleuth:
+      sampler:
+        probability: 1
+
+eureka:
+  client:
+    #表示将自己注册到注册中心
+    register-with-eureka: true
+    #表示去服务中心检索服务
+    fetchRegistry: true
+    service-url:
+      defaultZone: http://localhost:7001/eureka

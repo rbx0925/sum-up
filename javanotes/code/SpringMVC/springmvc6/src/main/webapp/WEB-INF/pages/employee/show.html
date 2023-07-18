@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <base th:href="@{/}">
+    <meta charset="UTF-8">
+    <title>展示所有员工</title>
+</head>
+<style>
+    /*修改表格样式*/
+    table {
+        border-collapse: collapse;
+    }
+    td{
+        border: 1px solid black;
+        width: 150px;
+        height: 30px;
+        text-align: center;
+    }
+</style>
+<body>
+<h1>展示所有员工</h1>
+<table>
+    <tr>
+        <td>ID</td>
+        <td>姓名</td>
+        <td>邮箱</td>
+        <td>薪资</td>
+        <td>部门id</td>
+        <td>部门名称</td>
+        <td>操作</td>
+    </tr>
+    <tr th:each="employee : ${employees}">
+        <td th:text="${employee.id}">xx</td>
+        <td th:text="${employee.lastName}">xx</td>
+        <td th:text="${employee.email}">xx</td>
+        <td th:text="${employee.salary}">xx</td>
+        <td th:text="${employee.department.id}">xx</td>
+        <td th:text="${employee.department.name}">xx</td>
+
+        <td>
+            <!--修改按钮所在的盒子布局-->
+            <div style="display: flex;justify-content: center">
+                <!--只是去修改页面，所以使用get请求-->
+                <!--url拼接方式1-->
+                <form th:action="@{'employee/toEditPage/'+ ${employee.id}}" method="get">
+                    <input type="submit" value="修改">
+                </form>
+                <!--删除使用DELETE请求-->
+                <!--url拼接方式2-->
+                <form th:action="@{employee/delete/} + ${employee.id}" method="post">
+                    <input type="hidden" name="_method" value="delete" />
+                    <input type="submit" value="删除">
+                </form>
+            </div>
+        </td>
+    </tr>
+</table>
+<!--只是去修改页面，get请求-->
+<a href="employee/toCreatePage/0">新建员工</a>
+</body>
+</html>

@@ -1,0 +1,14 @@
+server:
+  port: 83
+
+spring:
+  application:
+    name: nacos-order-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 39.106.35.112:8848
+#消费者将要去访问的微服务名称(注册成功进nacos的微服务提供者的服务名，注意：nacos-payment-provider含有IP和端口)
+#key可随便定义，使用@Value注入属性时书写一致即可
+service-url:
+  nacos-user-service: http://nacos-payment-provider

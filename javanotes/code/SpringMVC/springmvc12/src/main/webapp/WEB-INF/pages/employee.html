@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <base th:href="@{/}">
+    <meta charset="UTF-8">
+    <title>展示所有员工</title>
+</head>
+<style>
+    /*修改表格样式*/
+    table {
+        border-collapse: collapse;
+    }
+    td{
+        border: 1px solid black;
+        width: 150px;
+        height: 30px;
+        text-align: center;
+    }
+</style>
+<body>
+<h1>展示所有员工</h1>
+<table>
+    <tr>
+        <td>ID</td>
+        <td>姓名</td>
+        <td>邮箱</td>
+        <td>薪资</td>
+        <td>部门id</td>
+    </tr>
+    <tr th:each="employee : ${employees}">
+        <td th:text="${employee.id}">xx</td>
+        <td th:text="${employee.lastName}">xx</td>
+        <td th:text="${employee.email}">xx</td>
+        <td th:text="${employee.salary}">xx</td>
+        <td th:text="${employee.deptId}">xx</td>
+    </tr>
+</table>
+</body>
+</html>

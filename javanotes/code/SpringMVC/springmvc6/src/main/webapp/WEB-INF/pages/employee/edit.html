@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <base th:href="@{/}">
+    <meta charset="UTF-8">
+    <title>编辑员工</title>
+</head>
+<body>
+<h1>编辑员工</h1>
+<form action="employee/edit" method="post">
+    员工主键: <input th:value="${employee.id}" type="text" name="id"><br>
+    员工名称: <input th:value="${employee.lastName}" type="text" name="lastName"><br>
+    员工邮箱: <input th:value="${employee.email}" type="text" name="email"><br>
+    员工薪资: <input th:value="${employee.salary}" type="text" name="salary"><br>
+    员工部门:
+    <select name="department.id">
+        <option th:each="department:${departments}"
+                th:value="${department.id}"
+                th:text="${department.name}"
+                th:selected="${department.id == employee.department.id}">
+        </option>
+    </select><br>
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>

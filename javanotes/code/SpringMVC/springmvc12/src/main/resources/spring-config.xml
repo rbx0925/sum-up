@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <!--设置注解扫描包-->
+    <context:component-scan base-package="com.atguigu">
+        <!--排除@Controller注解，防止与springMVC冲突-->
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+
+    <!--加载外部属性文件 ⚠️接替mybatis工作-->
+    <context:property-placeholder location="classpath:db.properties"/>
+
+    <!--创建德鲁伊数据源：数据库连接池-->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="driverClassName" value="${jdbc.driver}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+    </bean>
+
+    <!--让Spring去扫描所有的接口和映射文件，将所有Mapper对象都创建好，存入到ioc容器内 ⚠️-->
+    <!--SqlSessionFactoryBean是整合jar包提供，帮助我们完成上述功能-->
+    <bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!--需要数据源：因为必须知道操作的数据库-->
+        <property name="dataSource" ref="dataSource"/>
+        <!--加载mybatis的核心配置文件-->
+        <property name="configLocation" value="classpath:mybatis-config.xml"/>
+        <!--加载mybatis的所有映射文件-->
+        <property name="mapperLocations" value="classpath:mapper/*.xml"/>
+    </bean>
+
+    <!--单独需要扫描一下所有的mapper接口-->
+    <mybatis-spring:scan base-package="com.atguigu.mapper"/>
+
+    <!--配置事务管理器-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <!--需要数据源-->
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <!--开启事务的注解支持-->
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+
+</beans>
