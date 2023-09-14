@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cd28c4b5-adeb-4e8e-bc5d-e52bf809e203" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/springSecurity/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springSecurity/src/main/java/com/rbx/controller/HelloController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tokenDemo/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tokenDemo/src/main/java/com/rbx/config/FastJsonRedisSerializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tokenDemo/src/main/java/com/rbx/config/RedisCache.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tokenDemo/src/main/java/com/rbx/config/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tokenDemo/src/main/java/com/rbx/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tokenDemo/src/main/java/com/rbx/controller/HelloController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tokenDemo/src/main/java/com/rbx/controller/loginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tokenDemo/src/main/java/com/rbx/domain/Result.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tokenDemo/src/main/java/com/rbx/domain/ResultEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tokenDemo/src/main/java/com/rbx/domain/ResultUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tokenDemo/src/main/java/com/rbx/entity/LoginUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tokenDemo/src/main/java/com/rbx/entity/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tokenDemo/src/main/java/com/rbx/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tokenDemo/src/main/java/com/rbx/filter/JwtAuthenticationTokenFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tokenDemo/src/main/java/com/rbx/handler/AccessDeniedHandlerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tokenDemo/src/main/java/com/rbx/handler/AuthenticationEntryPointImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tokenDemo/src/main/java/com/rbx/mapper/MenuMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tokenDemo/src/main/java/com/rbx/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tokenDemo/src/main/java/com/rbx/service/LoginService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tokenDemo/src/main/java/com/rbx/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tokenDemo/src/main/java/com/rbx/service/impl/LoginServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tokenDemo/src/main/java/com/rbx/service/impl/UserDetailsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tokenDemo/src/main/java/com/rbx/utils/CacheKey.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tokenDemo/src/main/java/com/rbx/utils/JwtUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tokenDemo/src/main/java/com/rbx/utils/RedisCache.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tokenDemo/src/main/java/com/rbx/utils/WebUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tokenDemo/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tokenDemo/src/main/resources/mapper/MenuMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tokenDemo/src/test/java/com/rbx/mapperTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Mybatis Mapper" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2V3Zzfydvi85UrEZucowsxKJT6x" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "jdk.selected.JAVA_MODULE": "1.8 (2)",
+    "last_opened_file_path": "D:/code/security/tokenDemo/src/main/resources/mapper",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.fileTypes",
+    "spring.configuration.checksum": "c5b5e451fbe43db571af1baa3f8d8144",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\code\security\tokenDemo\src\main\java\com\rbx\utils" />
+      <recent name="D:\code\security\tokenDemo\src\main\java\com\rbx\domain" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.TokenApplication">
+    <configuration name="mapperTest.testBCryptPasswordEncoder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tokenDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rbx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.rbx" />
+      <option name="MAIN_CLASS_NAME" value="com.rbx.mapperTest" />
+      <option name="METHOD_NAME" value="testBCryptPasswordEncoder" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="mapperTest.testHuToolJwt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tokenDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rbx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.rbx" />
+      <option name="MAIN_CLASS_NAME" value="com.rbx.mapperTest" />
+      <option name="METHOD_NAME" value="testHuToolJwt" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="mapperTest.testInsert2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tokenDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rbx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.rbx" />
+      <option name="MAIN_CLASS_NAME" value="com.rbx.mapperTest" />
+      <option name="METHOD_NAME" value="testInsert2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="mapperTest.testSelectPermsByUserId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tokenDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rbx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.rbx" />
+      <option name="MAIN_CLASS_NAME" value="com.rbx.mapperTest" />
+      <option name="METHOD_NAME" value="testSelectPermsByUserId" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TokenApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="tokenDemo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.rbx.TokenApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.rbx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.TokenApplication" />
+        <item itemvalue="JUnit.mapperTest.testSelectPermsByUserId" />
+        <item itemvalue="JUnit.mapperTest.testInsert2" />
+        <item itemvalue="JUnit.mapperTest.testBCryptPasswordEncoder" />
+        <item itemvalue="JUnit.mapperTest.testHuToolJwt" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cd28c4b5-adeb-4e8e-bc5d-e52bf809e203" name="Changes" comment="" />
+      <created>1694066988783</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1694066988783</updated>
+      <workItem from="1694066989781" duration="29057000" />
+      <workItem from="1694398637131" duration="8942000" />
+      <workItem from="1694591463818" duration="17194000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/springSecurity/src/main/java/com/rbx/SecurityApplication.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>jar://$PROJECT_DIR$/../../MavenRepository/org/springframework/security/spring-security-core/5.5.0/spring-security-core-5.5.0-sources.jar!/org/springframework/security/provisioning/MutableUser.java</url>
+          <line>77</line>
+          <properties class="org.springframework.security.provisioning.MutableUser" method="isEnabled">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="com.rbx.entity.LoginUser" memberName="user" />
+        <PinnedItemInfo parentTag="org.springframework.security.authentication.UsernamePasswordAuthenticationToken" memberName="credentials" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

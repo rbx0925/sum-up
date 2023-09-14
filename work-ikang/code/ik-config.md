@@ -437,6 +437,34 @@ public class RedisConfigTest {
 }
 ```
 
+**CacheKey使用RedisUtils需要粘贴这个**
+
+```java
+@Getter
+@ToString
+@RequiredArgsConstructor
+public class CacheKey  {
+
+    /**
+     * redis key
+     */
+    private final String key;
+
+    /**
+     * 超时时间 秒
+     */
+    @Nullable
+    private final Duration expire;
+
+    public CacheKey(String key) {
+        this(key, null);
+    }
+
+}
+```
+
+
+
 # RedisUtils 
 
 ```java
