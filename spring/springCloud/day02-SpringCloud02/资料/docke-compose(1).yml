@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  web:
+    build: .
+    ports:
+     - 8090: 8090
+  db:
+    image: mysql:5.7.25
+    volumes:
+     - /tmp/mysql/data:/var/lib/mysql
+     - /tmp/mysql/conf/my.cnf:/etc/mysql/conf.d/my.cnf
